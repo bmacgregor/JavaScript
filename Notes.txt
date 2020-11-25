@@ -1,0 +1,2 @@
+Grab the Monokai Pro theme
+Add the PDF Preview in VS Code extension (by Analytic Signal Limited)
