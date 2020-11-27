@@ -194,7 +194,7 @@ if (dolphAvg > koalaAvg && dolphAvg >= 100) {
 } else { console.log(`No winner can be declared. (D: ${dolphAvg.toFixed(2)} v. K: ${koalaAvg.toFixed(2)})`); } */
 
 /* LECTURE: THE SWITCH STATEMENT
-    1. Use a switchstatement to log the following string for the given 'language':
+    1. Use a switch statement to log the following string for the given 'language':
         chinese or mandarin: 'MOST number of native speakers!'
         spanish: '2nd place in number of native speakers'
         english: '3rd place'
@@ -202,15 +202,90 @@ if (dolphAvg > koalaAvg && dolphAvg >= 100) {
         arabic: '5th most spoken language'
         for all othersimply log 'Great language too :D' */
 
+/*
+switch (language) {
+    case "Chinese":
+    case "Mandarin":
+        console.log("MOST number of native speakers!");
+        break;
+    case "Spanish":
+        console.log("2nd place in number of native speakers");
+        break;
+    case "English":
+        console.log("3rd place");
+        break;
+    case "Hindi":
+        console.log("Number 4");
+        break;
+    case "Arabic":
+        console.log("5th most spoken language");
+        break;
+    default:
+        console.log("Great language too :D");
+} */
 
+const day = "sunday";
+
+/*
+switch (day) {
+    case 'monday':
+        console.log("Plan course structure.");
+        console.log("Go to coding meetup.");
+        break;
+    case "tuesday":
+        console.log("Make theory videos.");
+        break;
+    case "wednesday":
+    case "thursday":
+        console.log("Write code examples.");
+        break;
+    case "friday":
+        console.log("Record videos.");
+        break;
+    case "saturday":
+    case "sunday":
+        console.log("Enjoy your weekend!");
+        break;
+    default:
+        console.log("Not a valid weekday.");
+}
+
+// recreate the case using if else
+if (day === "monday") {
+    console.log("Plan course structure.");
+    console.log("Go to coding meetup.");
+} else if (day === "tuesday") {
+    console.log("Make theory videos.");
+} else if (day === "wednesday" || day === "thursday") {
+    console.log("Write code examples.");
+} else if (day === "friday") {
+    console.log("Record videos.");
+} else if (day === "saturday" || day === "sunday") {
+    console.log("Enjoy your weekend!");
+} else { console.log("Not a valid weekday."); } */
 
 /* LECTURE: THE CONDITIONAL (TERNARY) OPERATOR
-    1. If your country's population is greater than33 million, use the ternary operator to log a string like this to the console: 'Portugal's population is above average'. Otherwise, simply log 'Portugal's population is below average'. Notice how onlyone word changes between these two sentences!
+    1. If your country's population is greater than 33 million, use the ternary operator to log a string like this to the console: 'Portugal's population is above average'. Otherwise, simply log 'Portugal's population is below average'. Notice how onlyone word changes between these two sentences!
     2. After checking the result, change the population temporarily to 13 and then to 130. See the different results, and set the population back to original */
 
+/* population > 33 ? console.log(`${country}'s population is above average.`) : console.log(`${country}'s population is below average.`); */
 
+/* const age = 17;
+const drink = age >= 18 ? "wine" : "water";
+console.log(`I can drink ${drink}.`);
+console.log(`I like to drink ${age >= 18 ? "wine" : "water"}.`); */
 
 /* CODING CHALLENGE 4!!
+    Steven wants to build a very simple tip calculator for whenever he goes eating in a restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
+    Your tasks:
+        1. Calculatethe tip, depending on the bill value. Create a variable called 'tip' for this. It's not allowed to use an if/else statement (If it's easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)
+        2. Print a string to the console containing the bill value, the tip, and the final value (bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value 316.25”
 
-*/
+        Test data:
+            Data 1: Test for bill values 275, 40 and 430
+            Hints: To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+                Value X is between 50 and 300, if it's >= 50 && <= 300 */
 
+const bill = 240.00;
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+console.log(`The bill was $${bill.toFixed(2)}, the tip was $${tip.toFixed(2)}, and the total value was $${(bill + tip).toFixed(2)} (tip applied at ${bill >= 50 && bill <= 300 ? 15 : 20}%).`);
