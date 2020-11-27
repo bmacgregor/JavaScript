@@ -7,6 +7,8 @@
 // let firstName = "Bren";
 // console.log(firstName);
 
+// ------------------------------------------------ //
+
 /* LECTURE: VALUES AND VARIABLES
     1. Declare variables called 'country', 'continent' and 'population'and assign their values according to your own country(population in millions)
     2. Log their values to the console */
@@ -18,6 +20,8 @@ let population = 37.59; // let variables can changes in the future - reassignmen
 /* console.log(country);
 console.log(continent);
 console.log(population); */
+
+// ------------------------------------------------ //
 
 /* LECTURE: DATA TYPES
     1. Declare a variable called 'isIsland' and set its value according to your country. The variable should hold a Booleanvalue. Also declare a variable'language', but don't assign it any value yet
@@ -33,12 +37,16 @@ console.log(population);
 console.log(country);
 console.log(language); */
 
+// ------------------------------------------------ //
+
 /* LECTURE: let, const and var
     1. Set the value of 'language'to the language spoken where you live (some countries have multiple languages, but just choose one)
     2. Think about which variables should be const variables (which values will never change, and which might change?). Then, change these variables to const.
     3.Try to change one of the changed variables now, and observe what happens */
 
 language = "English"; // updating our existing variable
+
+// ------------------------------------------------ //
 
 /* LECTURE: BASIC OPERATORS
     1. If your country split in half, and each half would contain half the population, then how many people would live in each half?
@@ -60,6 +68,8 @@ x += 5;
 y++;
 console.log(x, y);
 console.log((x + y) / 2); // averages, and order of operations */
+
+// ------------------------------------------------ //
 
 /* CODING CHALLENGE 1!!
     Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / height ** 2 = mass / (height * height)
@@ -89,6 +99,8 @@ const markHigherBMI = markBMI > johnBMI;
 /* console.log("Mark's BMI:", markBMI, " | John's BMI:", johnBMI);
 console.log("Is Mark's BMI higher than John's?:", markHigherBMI); */
 
+// ------------------------------------------------ //
+
 /* LECTURE: STRINGS AND TEMPLATE LITERALS
     1. Recreate the 'description' variable from the last assignment, this time using the template literal syntax */
 
@@ -102,6 +114,8 @@ const description = `${country} is in ${continent}, and its ${population} millio
 /* if (population > 33) { console.log(`${country}'s population is above average.`); }
 else { console.log(`${country}'s population is below average.`); } */
 
+// ------------------------------------------------ //
+
 /* CODING CHALLENGE 2!!
     Use the BMI example from Challenge #1, and the code you already wrote, and improve it.
     Your tasks:
@@ -113,6 +127,8 @@ else { console.log(`${country}'s population is below average.`); } */
 } else {
     console.log(`John's (${johnBMI.toFixed(2)}) BMI is higher than Mark's (${markBMI.toFixed(2)})!`);
 } */
+
+// ------------------------------------------------ //
 
 /* LECTURE: TYPE CONVERSION AND COERCION
     1.Predict the result of these 5 operations without executing them:
@@ -128,6 +144,8 @@ console.log('19' - '13' + '17');
 console.log('19' - '13' + 17);
 console.log('123' < 57);
 console.log(5 + 6 + '4' + 9 - 4 - 2); */
+
+// ------------------------------------------------ //
 
 /* LECTURE: EQUALITY OPERATORS: == vs. ===
     1. Declare a variable 'numNeighbours' based on a prompt input like this: prompt('How many neighbour countries does your country have?');
@@ -151,6 +169,8 @@ if (numNeighbours === 1) {
     console.log("More than one border.")
 } else { console.log("No neighbours.") } */
 
+// ------------------------------------------------ //
+
 /* LECTURE: LOGICAL OPERATORS
     1. Comment out the previous code so the prompt doesn't get in the way
     2. Let's say Sarah is looking for a new country to live in. She wants to live in a country that speaks english, has less than 50 million people and is not an island.
@@ -161,6 +181,8 @@ if (numNeighbours === 1) {
 /* if (language === "English" && population < 50 && isIsland === false); {
     console.log(`You should live in ${country}.`)
 } else { console.log(`${country} doesn't meet your criteria.`); } */
+
+// ------------------------------------------------ //
 
 /* CODING CHALLENGE 3!!
     There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins a trophy!
@@ -192,6 +214,8 @@ if (dolphAvg > koalaAvg && dolphAvg >= 100) {
 } else if (dolphAvg === koalaAvg && dolphAvg >= 100) {
     console.log(`Both teams tie. (D: ${dolphAvg.toFixed(2)} v. K: ${koalaAvg.toFixed(2)})`);
 } else { console.log(`No winner can be declared. (D: ${dolphAvg.toFixed(2)} v. K: ${koalaAvg.toFixed(2)})`); } */
+
+// ------------------------------------------------ //
 
 /* LECTURE: THE SWITCH STATEMENT
     1. Use a switch statement to log the following string for the given 'language':
@@ -264,6 +288,8 @@ if (day === "monday") {
     console.log("Enjoy your weekend!");
 } else { console.log("Not a valid weekday."); } */
 
+// ------------------------------------------------ //
+
 /* LECTURE: THE CONDITIONAL (TERNARY) OPERATOR
     1. If your country's population is greater than 33 million, use the ternary operator to log a string like this to the console: 'Portugal's population is above average'. Otherwise, simply log 'Portugal's population is below average'. Notice how onlyone word changes between these two sentences!
     2. After checking the result, change the population temporarily to 13 and then to 130. See the different results, and set the population back to original */
@@ -274,6 +300,8 @@ if (day === "monday") {
 const drink = age >= 18 ? "wine" : "water";
 console.log(`I can drink ${drink}.`);
 console.log(`I like to drink ${age >= 18 ? "wine" : "water"}.`); */
+
+// ------------------------------------------------ //
 
 /* CODING CHALLENGE 4!!
     Steven wants to build a very simple tip calculator for whenever he goes eating in a restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
