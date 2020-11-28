@@ -44,12 +44,12 @@ console.log(describeCountry("Canada", 35, "Ottowa")); */
 
 // Lesson 34 - Function Declarations vs. Expressions
 // function DECLARATION
-/* function calcAge1(birthYear) { return 2020 - birthYear; }
+/* function calcAge1(birthYear) { return (new Date().getFullYear()) - birthYear; }
 const age1 = calcAge1(1984);
 console.log(age1);
 
 // function EXPRESSION, held by our calcAge2 VARIABLE
-const calcAge2 = function (birthYear) { return 2020 - birthYear; }
+const calcAge2 = function (birthYear) { return (new Date().getFullYear()) - birthYear; }
 const age2 = calcAge2(1984);
 console.log(age2); */
 
@@ -75,12 +75,12 @@ console.log(percentageOfWorld2(6)); */
 // ------------------------------------------------ //
 
 // Lesson 35 - Arrow Functions
-/* const calcAge3 = birthYear => 2020 - birthYear;
+/* const calcAge3 = birthYear => (new Date().getFullYear()) - birthYear;
 const age3 = calcAge3(1984);
 console.log(age3);
 
 const yearsUntilRetirement = (birthYear, firstName) => {
-    const age = 2020 - birthYear;
+    const age = (new Date().getFullYear()) - birthYear;
     const retirement = 65 - age;
     return `${firstName} retires in ${retirement} years.`;
 }
@@ -123,7 +123,7 @@ console.log(describePopulation("Finland", 6)); */
 // ------------------------------------------------ //
 
 // Lesson 37 - Reviewing Functions
-const calcAge = function (birthYear) { return 2020 - birthYear; }
+const calcAge = function (birthYear) { return (new Date().getFullYear()) - birthYear; }
 
 const yearsUntilRetirement = function (birthYear, firstName) {
     const age = calcAge(birthYear);
