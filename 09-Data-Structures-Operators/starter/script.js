@@ -76,8 +76,8 @@ const restaurant = {
 
 // ------------------------------------------------------------------------------- //
 // LESSON 103 - [DESTRUCTURING ARRAYS]
+// ------------------------------------------------------------------------------- //
 
-/* 
 const myArray = [2, 3, 4];
 
 // destructuring the array - unpacking it into individual variables
@@ -110,12 +110,11 @@ const [i, , [j, k]] = nested;
 // setting default values while destructuring
 const [p = -1, q = -1, r = -1] = [8, 9];
 // console.log(p, q, r);
-*/
 
 // ------------------------------------------------------------------------------- //
 // LESSON 104 - {DESTRUCTURING OBJECTS}
+// ------------------------------------------------------------------------------- //
 
-/*
 // destructuring object elements into variables - similar to arrays, but order doesn't matter, and we use curly braces instead of square braces
 const { name, openingHours, categories } = restaurant;
 // console.log(name, openingHours, categories);
@@ -137,7 +136,8 @@ let a = 111;
 let b = 999;
 const myObj = { a: 23, b: 7, c: 14 };
 
-({ a, b } = myObj); // need to wrap curly braces in round braces - curly braces alone will throw an error
+// need to wrap curly braces in round braces - curly braces alone will throw an error
+({ a, b } = myObj);
 // console.log(a, b);
 
 // nested objects - destructuring openingHours object which holds ANOTHER object into individual variables
@@ -165,12 +165,11 @@ restaurant.orderDelivery({
   address: '222 Renfello Drive',
   time: '11:00',
 });
-*/
 
 // ------------------------------------------------------------------------------- //
 // LESSON 105 - SPREAD OPERATOR [ ... ]
+// ------------------------------------------------------------------------------- //
 
-/*
 // using the spread operator to expand an array into individual elements
 const arr = [7, 8, 9];
 const badArray = [1, 2, arr[0], arr[1], arr[2]];
@@ -186,7 +185,7 @@ const newMenu = [...restaurant.mainMenu, 'Gnocci'];
 
 // spread is similar to destructuring, but it takes EVERYTHING from the array, and does NOT create new variables.  It can only be used when we're writing values when seperated by commas!
 
-// creating a shallow copy of an array with spread
+// creating a copy of an array with spread
 const mainMenuCopy = [...restaurant.mainMenu];
 // console.log(mainMenuCopy);
 
@@ -194,7 +193,7 @@ const mainMenuCopy = [...restaurant.mainMenu];
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 // console.log(menu);
 
-// spread works on ALL iterables - arrays, strings, maps, or sets but NOT objects!
+// spread works on ALL iterables - arrays, strings, maps, or sets, but NOT objects!
 
 // spreading a string into an array and adding a few new characters
 const myString = 'Bren';
@@ -224,12 +223,11 @@ const newRestaurant = {
 const restaurantCopy = { ...restaurant };
 restaurantCopy.name = 'Pharos Pizza';
 // console.log(restaurantCopy);
-*/
 
 // ------------------------------------------------------------------------------- //
 // LESSON 106 - REST PATTERN ( ... )
+// ------------------------------------------------------------------------------- //
 
-/*
 // Rest uses the same syntax as spread, but instead of unpacking an array, it packs it up!  Spread goes on the right side of assignment, and Rest goes on the left side during assignment
 
 // assigning 1 to a, 2 to b, and then everything else into c, which will be an array instead of a number
@@ -272,12 +270,11 @@ restaurant.orderPizza('Mushrooms', 'Onions', 'Olives', 'Spinach');
 
 // passing only one argument, which will result in the mainIngredient variable being set, and an empty array created
 restaurant.orderPizza('Cheese');
-*/
 
 // ------------------------------------------------------------------------------- //
 // LESSON 107 - SHORT CIRCUITING || AND &&
+// ------------------------------------------------------------------------------- //
 
-/*
 // short circuiting the OR operand
 // console.log(3 || 'Bren'); // 3 is truthy, so the OR operator will pass this to console.log to be used
 // console.log(0 || 'Bren'); // 0 is falsy, so the OR operator skips it and passes Bren to console.log
@@ -295,22 +292,20 @@ const guests1 = restaurant.numGuests || 10;
 // using the AND operator to check if a function exists, and if it does, we short circuit to call the function
 // restaurant.orderPizza && restaurant.orderPizza('Mushrooms', 'Spinach');
 restaurant.giveMeAPizza && restaurant.orderPizza('Mushrooms', 'Spinach'); // does not exist, so nothing happens
-*/
 
 // ------------------------------------------------------------------------------- //
 // LESSON 108 - NULLISH COALESCING OPERATOR (??)
+// ------------------------------------------------------------------------------- //
 
-/*
 // 0 is falsy but not NULLISH, so we can use the nullish operator to grab it anyway instead of jumping over to the short circuited 10
 restaurant.numGuests = 0;
 const guests2 = restaurant.numGuests ?? 10;
 // console.log(guests2);
-*/
 
 // ------------------------------------------------------------------------------- //
 // LESSON 110 - FOR/OF LOOPS
+// ------------------------------------------------------------------------------- //
 
-/*
 // looping over an array using a for/of loop
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 // for (const item of menu) console.log(item);
@@ -332,10 +327,10 @@ const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 // less abstract version of the above
 const [key, value] = menu.entries();
 // console.log(key, value);
-*/
 
 // ------------------------------------------------------------------------------- //
 // LESSON 111 - ENHANCED OBJECT LITERALS
+// ------------------------------------------------------------------------------- //
 
 // restaurant is an object literal - we literally wrote out the object syntax, defining everything about it
 // we can create an openingHours2 object and then pop it into the restaurant object directly
@@ -346,8 +341,8 @@ const [key, value] = menu.entries();
 
 // ------------------------------------------------------------------------------- //
 // LESSON 112 - OPTIONAL CHAINING (?.)
+// ------------------------------------------------------------------------------- //
 
-/*
 // we can use the optional chaining operator in place of an if to see if a property EXISTS - it's nullish
 // console.log(restaurant.openingHours2.monday?.open); // we don't have an opening hours property for Monday
 // console.log(restaurant.openingHours2.friday?.open); // but we DO have an opening hours for Friday
@@ -377,14 +372,13 @@ const [key, value] = menu.entries();
 // we can also use optional chaining to see if it's empty
 const users = [{ name: 'Bren', email: 'bren@me.com' }];
 
-console.log(users[0]?.name ?? 'User array is empty at the specific index.');
-console.log(users[5]?.name ?? 'User array is empty at the specific index.');
-*/
+// console.log(users[0]?.name ?? 'User array is empty at the specific index.');
+// console.log(users[5]?.name ?? 'User array is empty at the specific index.');
 
 // ------------------------------------------------------------------------------- //
 // LESSON 113 - LOOPING OBJECTS: KEYS, VALUES, AND ENTRIES
+// ------------------------------------------------------------------------------- //
 
-/*
 // getting property names based on their KEY
 const properties = Object.keys(openingHours2);
 // console.log(openingHours2);
@@ -406,12 +400,11 @@ const entries = Object.entries(openingHours2);
 for (const [key, { open, close }] of entries) {
   console.log(`On ${key}, we open at ${open}:00 and close at ${close}:00.`);
 }
-*/
 
 // ------------------------------------------------------------------------------- //
 // LESSON 115 - SETS
+// ------------------------------------------------------------------------------- //
 
-/*
 // a set is a collection of unique values
 const ordersSet = new Set([
   'Pasta',
@@ -450,13 +443,12 @@ const unpackedStaffSet = [...new Set(staff)];
 // console.log(new Set(staff).size);
 
 // how many unique characters are in a string?
-console.log(new Set('BrennanMacGregor').size);
-*/
+// console.log(new Set('BrennanMacGregor').size);
 
 // ------------------------------------------------------------------------------- //
 // LESSON 116 - MAPS - FUNDAMENTALS
+// ------------------------------------------------------------------------------- //
 
-/*
 // used to map values to keys - data is stored in key/value pairs
 
 const rest = new Map(); // easiest to just create an empty map
@@ -496,12 +488,11 @@ rest.set(arrMap, 'Test');
 // console.log(rest.get(arrMap));
 
 rest.set(document.querySelector('h1', 'Heading'));
-*/
 
 // ------------------------------------------------------------------------------- //
 // LESSON 117 - MAPS - ITERATION
+// ------------------------------------------------------------------------------- //
 
-/*
 // creating a new map without using set - we make an array of arrays
 const question = new Map([
   ['question', 'What is the best programming language in the world?'],
@@ -522,11 +513,11 @@ const hoursMap = new Map(Object.entries(openingHours2));
 //console.log(typeof question.get('correct'));
 
 // Quiz app
-console.log(question.get('question'));
+// console.log(question.get('question'));
 // maps are iterables, so you can use a for loop!
 for (const [key, value] of question) {
   if (typeof key === 'number') {
-    console.log(`Anwser #${key}: ${value}`);
+    // console.log(`Anwser #${key}: ${value}`);
   }
 }
 // const answer = Number(prompt('Your answer:'));
@@ -536,12 +527,11 @@ for (const [key, value] of question) {
 const convertedFromMap = [...question];
 // console.log(question);
 // console.log(convertedFromMap);
-*/
 
 // ------------------------------------------------------------------------------- //
 // LESSON 120 - WORKING WITH STRINGS 1
+// ------------------------------------------------------------------------------- //
 
-/*
 const airline = 'TAP Air Portugal';
 const plane = 'A320';
 
@@ -568,12 +558,11 @@ const checkMiddleSeat = function (seat) {
     : 'Not a Middle Seat.';
 };
 // console.log(checkMiddleSeat('11C'));
-*/
 
 // ------------------------------------------------------------------------------- //
 // LESSON 121 - WORKING WITH STRINGS 2
+// ------------------------------------------------------------------------------- //
 
-/*
 // changing a string's case
 const airline = 'TAP Air Portugal';
 
@@ -620,16 +609,18 @@ const checkBaggage = function (items) {
 // console.log(checkBaggage('I have a laptop, some food, and 36 Bombs.'));
 // console.log(checkBaggage('Socks and a camera.'));
 // console.log(checkBaggage('gUns and a knIfe.'));
-*/
 
 // ------------------------------------------------------------------------------- //
 // LESSON 122 - WORKING WITH STRINGS 3
+// ------------------------------------------------------------------------------- //
 
-/*
 // console.log('a+very+nice+string'.split('+')); // splitting a string
 
+// splitting a string on a given character
 const [firstName, lastName] = 'Brennan MacGregor'.split(' ');
-const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' '); // joining strings together
+
+// joining strings together
+const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
 // console.log(newName);
 
 const capitalizeName = function (name) {
@@ -680,7 +671,6 @@ const planesInQueue = function (n) {
   console.log(`There are ${n} planes in line ${'*'.repeat(n)}`);
 };
 // planesInQueue(25);
-*/
 
 // ------------------------------------------------------------------------------- //
 
@@ -778,14 +768,14 @@ game.odds.team1 < game.odds.team2 ||
 // 1. Loop over the game.scoredarray and print each player name to the console, along with the goal number (Example: "Goal 1: Lewandowski")
 /* for (const [goal, player] of Object.entries(game.scored)) {
   console.log(`Goal ${Number(goal) + 1}: ${player}`);
-}
+} */
 
 // 2. Use a loop to calculate the average odd and log it to the console (We already studied how to calculate averages, you can go check if you don't remember)
 let avg = 0;
 for (const num of Object.values(game.odds)) {
   avg += num;
 }
-console.log(avg / Object.values(game.odds).length); */
+// console.log(avg / Object.values(game.odds).length);
 
 /* 3. Print the 3 odds to the console, but in a nice formatted way, exactly like this:
       Odd of victory Bayern Munich: 1.33
@@ -816,7 +806,6 @@ const gameEvents = new Map([
   [92, 'Yellow Card'],
 ]);
 
-/*
 // 1. Create an array 'events' of the different game events that happened (no duplicates)
 const eventSet = new Set();
 for (const [, value] of gameEvents) {
@@ -832,19 +821,18 @@ gameEvents.delete(64);
 
 // 3. Compute and logthe following string to the console: "An event happened, on average, every 9 minutes"(keep in mind that a game has 90 minutes)
 const time = [...gameEvents.keys()];
-console.log(
+/* console.log(
   `An event happened, on average, every ${
     time[time.length - 1] / gameEvents.size
   } minutes.`
-);
+); */
 
 // 4. Loop over 'gameEvents'and log each elementto the console, marking whether it's in the first half or second half (after 45 min) of the game, like this:[FIRST HALF] 17: GOAL
-for (const [key, value] of gameEvents) {
+/* for (const [key, value] of gameEvents) {
   key <= 45
     ? console.log(`[FIRST HALF] ${key}: ${value}`)
     : console.log(`[SECOND HALF] ${key}: ${value}`);
-}
-*/
+} */
 
 // ------------------------------------------------------------------------------- //
 
