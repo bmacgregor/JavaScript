@@ -1,0 +1,21 @@
+{
+  "name": "javascript-course-material",
+  "version": "1.0.0",
+  "description": "This repo contains starter files and final code for all sections and projects contained in the course.",
+  "main": "script.js",
+  "scripts": {
+    "start17": "parcel .\\17-Modern-JS-Modules-Tooling\\starter\\index.html",
+    "build17": "parcel build .\\17-Modern-JS-Modules-Tooling\\starter\\index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.8.2",
+    "leaflet": "^1.7.1",
+    "lodash-es": "^4.17.20",
+    "regenerator-runtime": "^0.13.7"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  }
+}
