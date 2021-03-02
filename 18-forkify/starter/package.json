@@ -1,0 +1,20 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "Recipe app",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Brennan MacGregor",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.0.0-nightly.535",
+    "sass": "^1.32.4"
+  },
+  "dependencies": {
+    "core-js": "^3.8.2",
+    "regenerator-runtime": "^0.13.7"
+  }
+}
